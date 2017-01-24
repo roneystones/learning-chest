@@ -25,7 +25,7 @@ github_username:  roneystones
 # Build settings
 markdown: kramdown
 permalink: /:title
-theme: academic
+theme: jekyll-theme-cayman
 gems:
   - jekyll-feed
 exclude:
