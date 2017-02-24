@@ -15,7 +15,7 @@
 			parallax: true
 		});
 		new FragmentsFx(document.getElementById('frag-2'), {
-			fragments: 15,
+			fragments: 10,
 			boundaries: {x1: 200, x2: 100, y1: 10, y2: 50},
 			randomIntervals: {
 				top: {min: 0,max: 90},
@@ -28,7 +28,7 @@
 			parallax: true
 		});
 		new FragmentsFx(document.getElementById('frag-3'), {
-			fragments: 20,
+			fragments: 15,
 			boundaries: {x1: 100, x2: 300, y1: 0, y2: 0},
 			randomIntervals: {
 				top: {min: 0,max: 90},
@@ -41,7 +41,7 @@
 			parallax: true
 		});
 		new FragmentsFx(document.getElementById('frag-4'), {
-			fragments: 10,
+			fragments: 20,
 			boundaries: {x1: 250, x2: 75, y1: 50, y2: 50},
 			randomIntervals: {
 				top: {min: 0,max: 90},
@@ -54,7 +54,7 @@
 			parallax: true
 		});
 		new FragmentsFx(document.getElementById('frag-5'), {
-			fragments: 20,
+			fragments: 25,
 			boundaries: {x1: 50, x2: 300, y1: 0, y2: 0},
 			randomIntervals: {
 				top: {min: 0,max: 40},

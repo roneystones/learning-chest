@@ -1,6 +1,6 @@
 # Unsplash Fragments
 
-Study based on the article [Little Fragments](https://tympanus.net/codrops/?p=29649) by Codrops /Tutorial on how to create a simple image poster effect with little image fragments inspired by [The Grand Canyon](http://monstersareafraid.tumblr.com/post/115142712223/the-grand-canyon).
+Study based on the article [Little Fragments](https://tympanus.net/codrops/?p=29649) by Codrops (tutorial on how to create a simple image poster effect with little image fragments inspired by [The Grand Canyon](http://monstersareafraid.tumblr.com/post/115142712223/the-grand-canyon)).
 
 ## Credits
 
