@@ -37,6 +37,7 @@ a:focus {
   pointer-events: none;
 }
 
+
 /* Page Loader */
 
 .js .loading::before {
@@ -62,20 +63,20 @@ a:focus {
   pointer-events: none;
   border: 3px solid #c61dc8;
   -webkit-animation: loaderAnim 0.8s ease-out infinite alternate forwards;
-          animation: loaderAnim 0.8s ease-out infinite alternate forwards;
+  animation: loaderAnim 0.8s ease-out infinite alternate forwards;
 }
 
 @-webkit-keyframes loaderAnim {
   to {
     -webkit-transform: translate3d(0, -100px, 0);
-            transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
   }
 }
 
 @keyframes loaderAnim {
   to {
     -webkit-transform: translate3d(0, -100px, 0);
-            transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
   }
 }
 
@@ -86,14 +87,15 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .section--flow {
   padding: 3em 0;
   min-height: 100vh;
 }
+
 
 /* Content */
 
@@ -105,13 +107,13 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+  flex: none;
   position: relative;
 }
 
@@ -171,6 +173,7 @@ a:focus {
   background: -webkit-linear-gradient(bottom, #ffb857 90%, transparent 90%, transparent);
   background: linear-gradient(to top, #ffb857 90%, transparent 90%, transparent);
 }
+
 
 /* Adjust the layout for smaller screens */
 
