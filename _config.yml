@@ -6,14 +6,21 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Stones
-email: roneylacerda@gmail.com
+title: mJekyll
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien neque, accumsan a placerat ac, scelerisque sit amet velit."
-baseurl: "/jekyll-study"
-url: "http://roneystones.com.br"
+baseurl: "/mJekyll-theme"
 twitter_username: RoneyStones
 github_username:  roneystones
 
-# Build settings
+# Markdown settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build settings
 permalink: /:title/
+include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
