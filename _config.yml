@@ -8,7 +8,7 @@
 # Site settings
 title: mJekyll
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien neque, accumsan a placerat ac, scelerisque sit amet velit."
-baseurl: "/mJekyll-theme"
+baseurl: "/jekyll-study"
 twitter_username: RoneyStones
 github_username:  roneystones
 
