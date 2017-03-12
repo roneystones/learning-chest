@@ -26,9 +26,9 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
     templateUrl: 'partial/form-profile.html'
   })
 
-  .state('form.address', {
-    url: '/address',
-    templateUrl: 'partial/form-address.html'
+  .state('form.endereco', {
+    url: '/endereco',
+    templateUrl: 'partial/form-endereco.html'
   });
 
   // url desconhecida = volta para /form
@@ -44,7 +44,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
 
   // function que processa o form
   $scope.processForm = function() {
-    alert('awesome!');
+    alert('OK!');
   };
 
 });
