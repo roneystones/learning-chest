@@ -1,14 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group ">
-      <label class="control-label requiredField" for="fullName">
-        Nome Completo<span class="asteriskField">*</span>
+      <label class="control-label" for="fullName">
+        Nome Completo <span class="asteriskField">*</span>
       </label>
+      
       <div class="input-group">
         <div class="input-group-addon">
           <i class="glyphicon glyphicon-user"></i>
         </div>
-        <input id="fullName" type="text" class="form-control" name="fullName" ng-model="formData.fullName" required>
+        <input id="fullName" type="text" class="form-control" name="fullName" ng-model="formData.fullName" ng-required="true">
       </div>
     </div>
   </div>
@@ -17,14 +18,14 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group ">
-      <label class="control-label requiredField" for="birthDate">
-        Data de Nascimento<span class="asteriskField">*</span>
+      <label class="control-label" for="birthDate">
+        Data de Nascimento <span class="asteriskField">*</span>
       </label>
       <div class="input-group">
         <div class="input-group-addon">
           <i class="glyphicon glyphicon-calendar"></i>
         </div>
-        <input id="birthDate" type="text" class="form-control" name="birthDate" ng-model="formData.birthDate" required>
+        <input id="birthDate" type="text" class="form-control" name="birthDate" ng-model="formData.birthDate" ng-required="true">
       </div>
     </div>
   </div>
@@ -33,7 +34,7 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group">
-      <a ui-sref="form.endereco" class="btn btn-block btn-info" ng-disabled="myForm.$invalid">
+      <a ui-sref="form.endereco" class="btn btn-block btn-info" ng-disabled="signupForm.$invalid">
         Próximo
       </a>
     </div>

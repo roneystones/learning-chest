@@ -1,14 +1,40 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group ">
-      <label class="control-label requiredField" for="email">
-        Email<span class="asteriskField">*</span>
+      <label class="control-label" for="email">
+        Email <span class="asteriskField">*</span>
       </label>
       <div class="input-group">
         <div class="input-group-addon">
           <i class="glyphicon glyphicon-envelope"></i>
         </div>
-        <input id="email" type="text" class="form-control" name="email" ng-model="formData.email" required>
+        <input id="email" type="text" class="form-control" name="email" ng-model="formData.email" ng-minLength="3" ng-required="true">
+      </div>
+  
+      <div ng-messages="signupForm.email.$error">
+        <div ng-message="required" class="text-danger">
+          <small>Campo obrigatório</small>
+        </div>
+
+        <div ng-message="minLength" class="text-danger">
+          <small>Por favor, digite o nome completo</small>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="form-group ">
+      <label class="control-label" for="password">
+        Senha <span class="asteriskField">*</span>
+      </label>
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="glyphicon glyphicon-lock"></i>
+        </div>
+        <input id="password" type="password" class="form-control" name="password" ng-model="formData.password" ng-required="true">
       </div>
     </div>    
   </div>
@@ -17,30 +43,14 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group ">
-      <label class="control-label requiredField" for="password">
-        Senha<span class="asteriskField">*</span>
+      <label class="control-label" for="passwordConfirmation">
+        Repita a senha <span class="asteriskField">*</span>
       </label>
       <div class="input-group">
         <div class="input-group-addon">
           <i class="glyphicon glyphicon-lock"></i>
         </div>
-        <input id="password" type="password" class="form-control" name="password" ng-model="formData.password" required>
-      </div>
-    </div>    
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <div class="form-group ">
-      <label class="control-label requiredField" for="passwordConfirmation">
-        Repita a senha<span class="asteriskField">*</span>
-      </label>
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="glyphicon glyphicon-lock"></i>
-        </div>
-        <input id="passwordConfirmation" type="password" class="form-control" name="passwordConfirmation" ng-model="formData.passwordConfirmation" required>
+        <input id="passwordConfirmation" type="password" class="form-control" name="passwordConfirmation" ng-model="formData.passwordConfirmation" ng-required="true">
       </div>
     </div>
   </div>
@@ -49,7 +59,7 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form-group">
-      <a ui-sref="form.profile" class="btn btn-block btn-info">
+      <a ui-sref="form.profile" class="btn btn-block btn-info" ng-disabled="signupForm.$invalid">
         Próximo
       </a>
     </div>    

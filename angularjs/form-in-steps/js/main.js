@@ -1,6 +1,6 @@
 // Cria a app e injeta ngAnimate e ui-router 
 // =============================================================================
-angular.module('formApp', ['ngAnimate', 'ui.router'])
+angular.module('formApp', ['ngAnimate', 'ui.router', 'ngMessages'])
 
 // configura rotas 
 // =============================================================================
@@ -41,6 +41,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
 
   // armazena os dados do form
   $scope.formData = {};
+
 
   // function que processa o form
   $scope.processForm = function() {
