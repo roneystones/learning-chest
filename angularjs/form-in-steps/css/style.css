@@ -68,8 +68,7 @@ body {
   width: auto;
 }
 
-#form-views.ng-enter,
-#form-views.ng-leave {
+#form-views.ng-enter, #form-views.ng-leave {
   position: absolute;
   left: 30px;
   right: 30px;
