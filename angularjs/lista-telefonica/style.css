@@ -1,0 +1,13 @@
+.form-control {
+  margin-bottom: 5px;
+}
+
+.selecionado {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.contato-cor {
+  width: 20px;
+  height: 20px;
+}
