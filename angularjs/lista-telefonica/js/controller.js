@@ -1,10 +1,10 @@
 angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($scope) {
   $scope.app = "Lista Telefônica";
   $scope.contatos = [
-    {nome : "Pedro", telefone : "99998888", cor : "blue"},
-    {nome : "Ana", telefone : "99997777", cor : "yellow"},
-    {nome : "João", telefone : "99996666", cor : "green"},
-    {nome : "Maria", telefone : "99995555", cor : "red"}
+    {nome : "Pedro", telefone : "99998888", data: new Date(), cor : "blue"},
+    {nome : "Ana", telefone : "99997777", data: new Date(), cor : "yellow"},
+    {nome : "João", telefone : "99996666", data: new Date(), cor : "green"},
+    {nome : "Maria", telefone : "99995555", data: new Date(), cor : "red"}
   ];
 
   $scope.operadoras = [
@@ -31,5 +31,10 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($sc
     return contatos.some(function(contato) {
       return contato.selecionado;
     });
+  };
+
+  $scope.ordenarPor = function(campo) {
+    $scope.criterioDeOrdenacao = campo;
+    $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
   };
 });
