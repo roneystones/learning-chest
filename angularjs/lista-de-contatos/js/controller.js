@@ -1,5 +1,5 @@
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($scope) {
-  $scope.app = "Lista Telefônica";
+angular.module("listaDeContatos").controller("listaDeContatosCtrl", function($scope) {
+  $scope.app = "Lista de Contatos";
   $scope.contatos = [
     {nome : "Pedro", telefone : "99998888", data: new Date(), cor : "blue"},
     {nome : "Ana", telefone : "99997777", data: new Date(), cor : "yellow"},

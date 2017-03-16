@@ -1,0 +1,17 @@
+[{
+	"nome": "Pedro",
+	"telefone": "99998888",
+	"cor": "blue"
+}, {
+	"nome": "Ana",
+	"telefone": "99997777",
+	"cor": "yellow"
+}, {
+	"nome": "João",
+	"telefone": "99996666",
+	"cor": "green"
+}, {
+	"nome": "Maria",
+	"telefone": "99995555",
+	"cor": "red"
+}]
