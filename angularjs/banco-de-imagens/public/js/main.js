@@ -1,1 +1,1 @@
-angular.module('imagebank', ['MinhasDiretivas']);
+angular.module('imagebank', ['MinhasDiretivas', 'ngAnimate']);
