@@ -1,1 +1,1 @@
-angular.module('imagebank', []);
+angular.module('imagebank', ['MinhasDiretivas']);
