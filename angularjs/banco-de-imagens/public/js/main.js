@@ -8,12 +8,9 @@ angular.module('imagebank', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
       controller: 'FotosController'
     });
 
-    $routeProvider.otherwise({
-      redirectTo: '/fotos'
-    });
-
     $routeProvider.when('/fotos/new', {
-      templateUrl: 'partials/foto.html'
+      templateUrl: 'partials/foto.html',
+      controller: 'FotoController'
     });
 
     $routeProvider.otherwise({
