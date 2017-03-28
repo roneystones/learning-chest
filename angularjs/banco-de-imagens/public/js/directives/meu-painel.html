@@ -2,6 +2,19 @@
   <div class="panel-heading">
     <h3 class="panel-title text-center">{{titulo}}</h3>
   </div>
+
   <div class="panel-body" ng-transclude>
+  </div>
+
+  <div class="panel-footer">
+    <div class="btn-group btn-group-justified" role="group">
+      <div class="btn-group" role="group">
+        <a class="btn btn-xs btn-primary" href="/fotos/edit/{{foto._id}}">Editar</a>
+      </div>
+
+      <div class="btn-group" role="group">
+        <button class="btn btn-xs btn-danger" ng-click="remover(foto)">Remover</button>
+      </div>
+    </div>
   </div>
 </div>
