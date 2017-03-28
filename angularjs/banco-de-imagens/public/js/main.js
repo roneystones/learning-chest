@@ -1,4 +1,5 @@
-angular.module('imagebank', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
+angular.module('imagebank', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'meusServicos'])
+
   .config(function($routeProvider, $locationProvider) {
 
     $locationProvider.html5Mode(true);
@@ -14,12 +15,10 @@ angular.module('imagebank', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
     });
 
     $routeProvider.when('/fotos/edit/:fotoId', {
-      templateUrl: 'partials/foto.html',
-      controller: 'FotoController'
+        templateUrl: 'partials/foto.html',
+        controller: 'FotoController'
     });
 
-    $routeProvider.otherwise({
-      redirectTo: '/fotos'
-    });
+    $routeProvider.otherwise({ redirectTo: '/fotos' });
 
   });
