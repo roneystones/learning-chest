@@ -5,7 +5,9 @@ angular.module('imagebank')
     $scope.mensagem = '';
 
     if ($routeParams.fotoId) {
-      recursoFoto.get({ fotoId: $routeParams.fotoId }, function(foto) {
+      recursoFoto.get({
+        fotoId: $routeParams.fotoId
+      }, function(foto) {
         $scope.foto = foto;
       }, function(erro) {
         $scope.mensagem = 'Não foi possível obter a foto'
