@@ -9,6 +9,8 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -23,6 +25,7 @@ html, body {
   left: 0;
   top: 0;
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -39,6 +42,7 @@ html, body {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
 }
+
 .product-description span {
   font-size: 12px;
   color: #358ED7;
@@ -46,12 +50,14 @@ html, body {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .product-description h1 {
   font-weight: 300;
   font-size: 52px;
   color: #43484D;
   letter-spacing: -2px;
 }
+
 .product-description p {
   font-size: 16px;
   font-weight: 300;
@@ -71,7 +77,7 @@ html, body {
   display: none;
 }
 
-.color-choose input[type="radio"] + label span {
+.color-choose input[type="radio"]+label span {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -81,22 +87,24 @@ html, body {
   border-radius: 50%;
 }
 
-.color-choose input[type="radio"] + label span {
+.color-choose input[type="radio"]+label span {
   border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
 
-.color-choose input[type="radio"]#red + label span {
+.color-choose input[type="radio"]#red+label span {
   background-color: #C91524;
 }
-.color-choose input[type="radio"]#blue + label span {
+
+.color-choose input[type="radio"]#blue+label span {
   background-color: #314780;
 }
-.color-choose input[type="radio"]#black + label span {
+
+.color-choose input[type="radio"]#black+label span {
   background-color: #323232;
 }
 
-.color-choose input[type="radio"]:checked + label span {
+.color-choose input[type="radio"]:checked+label span {
   background-image: url(img/check-icn.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -114,12 +122,11 @@ html, body {
   color: #5E6977;
   background-color: #fff;
   cursor: pointer;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-.cable-choose button:hover,
-.cable-choose button:active,
-.cable-choose button:focus {
+.cable-choose button:hover, .cable-choose button:active, .cable-choose button:focus {
   border: 2px solid #86939E;
   outline: none;
 }
@@ -137,6 +144,7 @@ html, body {
   margin: 10px 0;
   display: inline-block;
 }
+
 .cable-config a:before {
   content: "?";
   height: 15px;
@@ -151,7 +159,11 @@ html, body {
 }
 
 .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -170,23 +182,25 @@ html, body {
   color: #FFFFFF;
   text-decoration: none;
   padding: 12px 30px;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
+
 .cart-btn:hover {
   background-color: #64af3d;
 }
 
 @media (max-width: 940px) {
   .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 60px;
   }
-
-  .left-column,
-  .right-column {
+  .left-column, .right-column {
     width: 100%;
   }
-
   .left-column img {
     width: 300px;
     right: 0;
