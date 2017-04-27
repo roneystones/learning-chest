@@ -11,20 +11,21 @@ function drawChart() {
 
   // Create the data table.
   var data = google.visualization.arrayToDataTable([
-    ['Montants', '1er Pilier', '2ème Pilier', 'Prévoyance'],
-    ['2000', 1234, 2345, 3456],
-    ['2005', 1643, 2582, 2123],
-    ['2010', 2108, 1219, 3229]
+    ['Teste', 'lorem', 'Ipsum', 'Dolor', 'Est'],
+    ['2000', 1234, 2345, 3456, 4321],
+    ['2005', 1643, 2582, 2123, 2341],
+    ['2010', 2108, 1219, 3229, 5432],
+    ['2015', 1324, 2143, 3214, 4123]
   ]);
 
   // Set chart options
   var options = {
-    title: 'Foresight',
+    title: 'Teste',
     width: 600,
     height: 400,
     colors: ['#701C96', '#B88FD0', '#009640'],
     legend: { position: 'bottom', maxLines: 2 },
-    isStacked: true
+    isStacked: true,
   };
 
   // Instantiate and draw our chart, passing in some options.

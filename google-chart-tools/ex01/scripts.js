@@ -94,7 +94,7 @@ function line02() {
   data.setValue(6, 0, 'Julho');
   data.setValue(6, 1, 628.60);
   data.setValue(6, 2, 916.70);
-  data.setValue(6, 3, 920.89);
+  data.setValue(6, 3, 820.89);
 
   data.setValue(7, 0, 'Agosto');
   data.setValue(7, 1, 955.12);

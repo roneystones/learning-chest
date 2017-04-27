@@ -3,9 +3,9 @@ google.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Päiväys');
-  data.addColumn('number', 'Määrä');
-  data.addColumn('number', 'Määrä2');
+  data.addColumn('string', 'Teste');
+  data.addColumn('number', 'Lorem');
+  data.addColumn('number', 'Ipsum');
   data.addColumn({
     type: 'string',
     role: 'annotation'
@@ -19,14 +19,14 @@ function drawChart() {
   });
 
   data.addRows([
-    ['April', 1100, 1300, 'julkaisu', createCustomHTMLContent(
+    ['April', 1100, 1300, 'Início', createCustomHTMLContent(
       '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOpiferum%2Fposts%2F1048118385245019&width=500" width="500" height="298" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'
     )],
     ['May', 1200, 800, null, null],
     ['May', 1300, 1100, null, null],
     ['May', 600, 600, null, null],
     ['May', 980, 800, null, null],
-    ['June', 800, 1800, 'julkaisu', createCustomHTMLContent(
+    ['June', 800, 1800, 'Fim', createCustomHTMLContent(
       '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOpiferum%2Fposts%2F1048118385245019&width=500" width="500" height="298" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'
     )],
     ['July', 1030, 1700, null, null]

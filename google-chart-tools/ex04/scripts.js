@@ -26,7 +26,7 @@ function drawChart() {
     'title': 'LA Dodgers 2013 Wins by Pitchers',
     'width': 800,
     'height': 600,
-    colors: ['#7CB064', '#BE2748', '#55485E', '#42241A', '#FA7A9D', '#E0E4D5'],
+    colors: ['#252429', '#5e6f58', '#34324d', '#434260', '#6a787c', '#424242'],
     backgroundColor: '#E9D5B9',
     fontSize: 18,
     fontName: 'Roboto',
