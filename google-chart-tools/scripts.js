@@ -8,134 +8,129 @@ google.setOnLoadCallback(intensitymap);
 google.setOnLoadCallback(geochart);
 
 function line01() {
-  var dados = new google.visualization.DataTable();
-  dados.addColumn('date', 'Dias');
-  dados.addRows(6);
+  var data = new google.visualization.DataTable();
+  data.addColumn('date', 'Dias');
+  data.addRows(6);
 
-  dados.addColumn('number', 'Conta Corrente');
-  dados.addColumn('number', 'Conta Investimento');
+  data.addColumn('number', 'Conta Corrente');
+  data.addColumn('number', 'Conta Poupança');
 
-  dados.setValue(0, 0, new Date(2011, 01, 07));
-  dados.setValue(0, 1, 1023.29);
-  dados.setValue(0, 2, 410.50);
+  data.setValue(0, 0, new Date(2017, 01, 07));
+  data.setValue(0, 1, 1023.29);
+  data.setValue(0, 2, 410.50);
 
-  dados.setValue(1, 0, new Date(2011, 01, 08));
-  dados.setValue(1, 1, 908.42);
-  dados.setValue(1, 2, 490.82);
+  data.setValue(1, 0, new Date(2017, 01, 08));
+  data.setValue(1, 1, 908.42);
+  data.setValue(1, 2, 490.82);
 
-  dados.setValue(2, 0, new Date(2011, 01, 09));
-  dados.setValue(2, 1, 852.97);
-  dados.setValue(2, 2, 450.17);
+  data.setValue(2, 0, new Date(2017, 01, 09));
+  data.setValue(2, 1, 852.97);
+  data.setValue(2, 2, 450.17);
 
-  dados.setValue(3, 0, new Date(2011, 01, 10));
-  dados.setValue(3, 1, 1780.0);
-  dados.setValue(3, 2, 450.17);
+  data.setValue(3, 0, new Date(2017, 01, 10));
+  data.setValue(3, 1, 1780.0);
+  data.setValue(3, 2, 450.17);
 
-  dados.setValue(4, 0, new Date(2011, 01, 11));
-  dados.setValue(4, 1, 1621.69);
-  dados.setValue(4, 2, 720.81);
+  data.setValue(4, 0, new Date(2017, 01, 11));
+  data.setValue(4, 1, 1621.69);
+  data.setValue(4, 2, 720.81);
 
-  dados.setValue(5, 0, new Date(2011, 01, 12));
-  dados.setValue(5, 1, 1352.50);
-  dados.setValue(5, 2, 698.42);
+  data.setValue(5, 0, new Date(2017, 01, 12));
+  data.setValue(5, 1, 1352.50);
+  data.setValue(5, 2, 698.42);
 
   var formatter = new google.visualization.DateFormat({
     pattern: 'dd/MM/yyyy',
   });
-  formatter.format(dados, 0);
+  formatter.format(data, 0);
 
-  var div = document.getElementById('line01');
-  var grafico = new google.visualization.LineChart(div);
+  var grafico = new google.visualization.LineChart(document.getElementById('line01'));
   
-  grafico.draw(dados, {
-    width:800,
-    height:400,
-    title:'Minhas Finanças'});
+  grafico.draw(data, {
+    title:'Conta Corrente / Poupança'});
 };
 
 function line02() {
-  var dados = new google.visualization.DataTable();
+  var data = new google.visualization.DataTable();
 
-  dados.addColumn('string', 'Mês');
-  dados.addColumn('number', '2008');
-  dados.addColumn('number', '2009');
-  dados.addColumn('number', '2010');
+  data.addColumn('string', 'Mês');
+  data.addColumn('number', '2014');
+  data.addColumn('number', '2015');
+  data.addColumn('number', '2016');
 
-  dados.addRows(12);
+  data.addRows(12);
 
-  dados.setValue(0, 0, 'Janeiro');
-  dados.setValue(0, 1, 340.40);
-  dados.setValue(0, 2, 172.54);
-  dados.setValue(0, 3, 243.18);
+  data.setValue(0, 0, 'Janeiro');
+  data.setValue(0, 1, 340.40);
+  data.setValue(0, 2, 172.54);
+  data.setValue(0, 3, 243.18);
 
-  dados.setValue(1, 0, 'Fevereiro');
-  dados.setValue(1, 1, 178.20);
-  dados.setValue(1, 2, 203.30);
-  dados.setValue(1, 3, 326.10);
+  data.setValue(1, 0, 'Fevereiro');
+  data.setValue(1, 1, 178.20);
+  data.setValue(1, 2, 203.30);
+  data.setValue(1, 3, 326.10);
 
-  dados.setValue(2, 0, 'Março');
-  dados.setValue(2, 1, 849.90);
-  dados.setValue(2, 2, 239.00);
-  dados.setValue(2, 3, 704.10);
+  data.setValue(2, 0, 'Março');
+  data.setValue(2, 1, 849.90);
+  data.setValue(2, 2, 239.00);
+  data.setValue(2, 3, 704.10);
 
-  dados.setValue(3, 0, 'Abril');
-  dados.setValue(3, 1, 501.40);
-  dados.setValue(3, 2, 794.60);
-  dados.setValue(3, 3, 775.30);
+  data.setValue(3, 0, 'Abril');
+  data.setValue(3, 1, 501.40);
+  data.setValue(3, 2, 794.60);
+  data.setValue(3, 3, 775.30);
 
-  dados.setValue(4, 0, 'Maio');
-  dados.setValue(4, 1, 915.50);
-  dados.setValue(4, 2, 3.60);
-  dados.setValue(4, 3, 644.60);
+  data.setValue(4, 0, 'Maio');
+  data.setValue(4, 1, 915.50);
+  data.setValue(4, 2, 3.60);
+  data.setValue(4, 3, 644.60);
 
-  dados.setValue(5, 0, 'Junho');
-  dados.setValue(5, 1, 932.70);
-  dados.setValue(5, 2, 71.80);
-  dados.setValue(5, 3, 62.80);
+  data.setValue(5, 0, 'Junho');
+  data.setValue(5, 1, 932.70);
+  data.setValue(5, 2, 71.80);
+  data.setValue(5, 3, 62.80);
 
-  dados.setValue(6, 0, 'Julho');
-  dados.setValue(6, 1, 628.60);
-  dados.setValue(6, 2, 916.70);
-  dados.setValue(6, 3, 920.89);
+  data.setValue(6, 0, 'Julho');
+  data.setValue(6, 1, 628.60);
+  data.setValue(6, 2, 916.70);
+  data.setValue(6, 3, 920.89);
 
-  dados.setValue(7, 0, 'Agosto');
-  dados.setValue(7, 1, 955.12);
-  dados.setValue(7, 2, 110.35);
-  dados.setValue(7, 3, 561.90);
+  data.setValue(7, 0, 'Agosto');
+  data.setValue(7, 1, 955.12);
+  data.setValue(7, 2, 110.35);
+  data.setValue(7, 3, 561.90);
 
-  dados.setValue(8, 0, 'Setembro');
-  dados.setValue(8, 1, 150.41);
-  dados.setValue(8, 2, 671.90);
-  dados.setValue(8, 3, 195.81);
+  data.setValue(8, 0, 'Setembro');
+  data.setValue(8, 1, 150.41);
+  data.setValue(8, 2, 671.90);
+  data.setValue(8, 3, 195.81);
 
-  dados.setValue(9, 0, 'Outubro');
-  dados.setValue(9, 1, 502.20);
-  dados.setValue(9, 2, 841.20);
-  dados.setValue(9, 3, 543.58);
+  data.setValue(9, 0, 'Outubro');
+  data.setValue(9, 1, 502.20);
+  data.setValue(9, 2, 841.20);
+  data.setValue(9, 3, 543.58);
 
-  dados.setValue(10, 0, 'Novembro');
-  dados.setValue(10, 1, 819.50);
-  dados.setValue(10, 2, 670.30);
-  dados.setValue(10, 3, 34.91);
+  data.setValue(10, 0, 'Novembro');
+  data.setValue(10, 1, 819.50);
+  data.setValue(10, 2, 670.30);
+  data.setValue(10, 3, 34.91);
 
-  dados.setValue(11, 0, 'Dezembro');
-  dados.setValue(11, 1, 787.85);
-  dados.setValue(11, 2, 332.18);
-  dados.setValue(11, 3, 512.67);
+  data.setValue(11, 0, 'Dezembro');
+  data.setValue(11, 1, 787.85);
+  data.setValue(11, 2, 332.18);
+  data.setValue(11, 3, 512.67);
 
   var formatter = new google.visualization.DateFormat({
     formatType: 'medium',
   });
-  formatter.format(dados, 0);
+  formatter.format(data, 0);
 
-  var div = document.getElementById('line02');
-  var grafico = new google.visualization.LineChart(div);
+  var grafico = new google.visualization.LineChart(document.getElementById('line02'));
+
   var configuracoes = {
-    width:800,
-    height:400,
-    title:'Minhas Finanças'
+    title:'Finanças / Ano'
   };
-  grafico.draw(dados, configuracoes);
+  grafico.draw(data, configuracoes);
 };
 
 function bar() {
@@ -145,61 +140,48 @@ function bar() {
 
   data.addRows(12);
 
-  // Janeiro
   data.setValue(0, 0, 'Janeiro');
   data.setValue(0, 1, 14540);
 
-  // Fevereiro
   data.setValue(1, 0, 'Fevereiro');
   data.setValue(1, 1, 12459);
 
-  // Março
   data.setValue(2, 0, 'Março');
   data.setValue(2, 1, 15958);
 
-  // Abril
   data.setValue(3, 0, 'Abril');
   data.setValue(3, 1, 20349);
 
-  // Maio
   data.setValue(4, 0, 'Maio');
   data.setValue(4, 1, 23495);
 
-  // Junho
   data.setValue(5, 0, 'Junho');
   data.setValue(5, 1, 17331);
 
-  // Julho
   data.setValue(6, 0, 'Julho');
   data.setValue(6, 1, 12384);
 
-  // Agosto
   data.setValue(7, 0, 'Agosto');
   data.setValue(7, 1, 13495);
 
-  // Setembro
   data.setValue(8, 0, 'Setembro');
   data.setValue(8, 1, 13999);
 
-  // Outubro
   data.setValue(9, 0, 'Outubro');
   data.setValue(9, 1, 20230);
 
-  // Novembro
   data.setValue(10, 0, 'Novembro');
   data.setValue(10, 1, 22348);
 
-  // Dezembro
   data.setValue(11, 0, 'Dezembro');
   data.setValue(11, 1, 21230);
 
   var chart = new google.visualization.BarChart(document.getElementById('bar'));
 
   chart.draw(data, {
-    width: 800,
-    height: 400,
-    title: 'Gastos',
-    vAxis: {title: 'Valor'}
+    width : 1170,
+    height : 600,
+    title : 'Gastos / Mês'
   })
 };
 
@@ -223,9 +205,9 @@ function pie() {
   var chart = new google.visualization.PieChart(document.getElementById('pie'));
   
   chart.draw(data, {
-    width: 800,
-    height: 400,
-    title: 'Tipos de gastos'
+    width : 1170,
+    height : 600,
+    title: 'Categorias'
   })
 };
 
@@ -246,13 +228,11 @@ function intensitymap() {
   data.setValue(1, 1, 1138);
   data.setValue(1, 2, 45986);
 
-  var div = document.getElementById('intensitymap');
-  var grafico = new google.visualization.IntensityMap(div);
+  var grafico = new google.visualization.IntensityMap(document.getElementById('intensitymap'));
   
   grafico.draw(data, {
-    region: 'south_america',
-    width: 800,
-    height: 400
+    height : 440,
+    region : 'south_america',
   })
 };
 
@@ -277,5 +257,57 @@ function geochart() {
     data.setValue(5, 1, 14097333);
 
     var geochart = new google.visualization.GeoChart(document.getElementById('geochart'));
-    geochart.draw(data, {region : 'BR', resolution: 'provinces'});
+    
+    geochart.draw(data, {
+      height : 440,
+      region : 'BR',
+      resolution : 'provinces'
+    })
 };
+
+// ...............................................................
+
+google.setOnLoadCallback(drawChart1);
+google.setOnLoadCallback(drawChart2);
+
+function drawChart1() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2004',  1000,      400],
+    ['2005',  1170,      460],
+    ['2006',  660,       1120],
+    ['2007',  1030,      540]
+  ]);
+
+  var options = {
+    title: 'Company Performance',
+    hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
+ };
+
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
+  chart.draw(data, options);
+}
+
+function drawChart2() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2013',  1000,      400],
+    ['2014',  1170,      460],
+    ['2015',  660,       1120],
+    ['2016',  1030,      540]
+  ]);
+
+  var options = {
+    title: 'Company Performance',
+    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+    vAxis: {minValue: 0}
+  };
+
+  var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+  chart.draw(data, options);
+}
+
+$(window).resize(function(){
+  drawChart1();
+  drawChart2();
+});
