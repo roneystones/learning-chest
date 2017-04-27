@@ -1,4 +1,4 @@
-google.load('visualization', '1', {packages:['corechart', 'intensitymap', 'geochart']});
+google.load('visualization', '1', { packages: ['corechart', 'intensitymap', 'geochart'] });
 
 google.setOnLoadCallback(line01);
 google.setOnLoadCallback(line02);
@@ -45,9 +45,10 @@ function line01() {
   formatter.format(data, 0);
 
   var grafico = new google.visualization.LineChart(document.getElementById('line01'));
-  
+
   grafico.draw(data, {
-    title:'Conta Corrente / Poupança'});
+    title: 'Conta Corrente / Poupança'
+  });
 };
 
 function line02() {
@@ -128,7 +129,7 @@ function line02() {
   var grafico = new google.visualization.LineChart(document.getElementById('line02'));
 
   var configuracoes = {
-    title:'Finanças / Ano'
+    title: 'Finanças / Ano'
   };
   grafico.draw(data, configuracoes);
 };
@@ -179,9 +180,9 @@ function bar() {
   var chart = new google.visualization.BarChart(document.getElementById('bar'));
 
   chart.draw(data, {
-    width : 1170,
-    height : 600,
-    title : 'Gastos / Mês'
+    width: 980,
+    height: 600,
+    title: 'Gastos / Mês'
   })
 };
 
@@ -192,7 +193,7 @@ function pie() {
   data.addColumn('number', 'Valor gasto');
 
   data.addRows(4);
-  
+
   data.setValue(0, 0, 'Alimentação');
   data.setValue(0, 1, 450);
   data.setValue(1, 0, 'Combustível');
@@ -203,21 +204,21 @@ function pie() {
   data.setValue(3, 1, 350);
 
   var chart = new google.visualization.PieChart(document.getElementById('pie'));
-  
+
   chart.draw(data, {
-    width : 1170,
-    height : 600,
+    width: 980,
+    height: 600,
     title: 'Categorias'
   })
 };
 
 function intensitymap() {
   var data = new google.visualization.DataTable();
-  
+
   data.addColumn('string', '', 'País');
   data.addColumn('number', 'Área (1000 km2)');
   data.addColumn('number', 'População (mil)');
-  
+
   data.addRows(2);
 
   data.setValue(0, 0, 'BR');
@@ -229,85 +230,38 @@ function intensitymap() {
   data.setValue(1, 2, 45986);
 
   var grafico = new google.visualization.IntensityMap(document.getElementById('intensitymap'));
-  
+
   grafico.draw(data, {
-    height : 440,
-    region : 'south_america',
+    height: 400,
+    region: 'south_america',
   })
 };
 
 function geochart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Estado');
-    data.addColumn('number', 'População (hab)');
-    
-    data.addRows(6);
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Estado');
+  data.addColumn('number', 'População (hab)');
 
-    data.setValue(0, 0, 'BR-SP');
-    data.setValue(0, 1, 41589892);
-    data.setValue(1, 0, 'BR-ES');
-    data.setValue(1, 1, 3547013);
-    data.setValue(2, 0, 'BR-CE');
-    data.setValue(2, 1, 8530058);
-    data.setValue(3, 0, 'BR-AM');
-    data.setValue(3, 1, 3538359);
-    data.setValue(4, 0, 'BR-RS');
-    data.setValue(4, 1, 10732770);
-    data.setValue(5, 0, 'BR-BA');
-    data.setValue(5, 1, 14097333);
+  data.addRows(6);
 
-    var geochart = new google.visualization.GeoChart(document.getElementById('geochart'));
-    
-    geochart.draw(data, {
-      height : 440,
-      region : 'BR',
-      resolution : 'provinces'
-    })
+  data.setValue(0, 0, 'BR-SP');
+  data.setValue(0, 1, 41589892);
+  data.setValue(1, 0, 'BR-ES');
+  data.setValue(1, 1, 3547013);
+  data.setValue(2, 0, 'BR-CE');
+  data.setValue(2, 1, 8530058);
+  data.setValue(3, 0, 'BR-AM');
+  data.setValue(3, 1, 3538359);
+  data.setValue(4, 0, 'BR-RS');
+  data.setValue(4, 1, 10732770);
+  data.setValue(5, 0, 'BR-BA');
+  data.setValue(5, 1, 14097333);
+
+  var geochart = new google.visualization.GeoChart(document.getElementById('geochart'));
+
+  geochart.draw(data, {
+    height: 400,
+    region: 'BR',
+    resolution: 'provinces'
+  })
 };
-
-// ...............................................................
-
-google.setOnLoadCallback(drawChart1);
-google.setOnLoadCallback(drawChart2);
-
-function drawChart1() {
-  var data = google.visualization.arrayToDataTable([
-    ['Year', 'Sales', 'Expenses'],
-    ['2004',  1000,      400],
-    ['2005',  1170,      460],
-    ['2006',  660,       1120],
-    ['2007',  1030,      540]
-  ]);
-
-  var options = {
-    title: 'Company Performance',
-    hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
- };
-
-var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
-  chart.draw(data, options);
-}
-
-function drawChart2() {
-  var data = google.visualization.arrayToDataTable([
-    ['Year', 'Sales', 'Expenses'],
-    ['2013',  1000,      400],
-    ['2014',  1170,      460],
-    ['2015',  660,       1120],
-    ['2016',  1030,      540]
-  ]);
-
-  var options = {
-    title: 'Company Performance',
-    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-    vAxis: {minValue: 0}
-  };
-
-  var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
-  chart.draw(data, options);
-}
-
-$(window).resize(function(){
-  drawChart1();
-  drawChart2();
-});
