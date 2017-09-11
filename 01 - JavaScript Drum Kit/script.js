@@ -2,10 +2,10 @@ function playSound(event) {
   const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
   const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
 
-  // stop the function from running if invalid keypress
+  // interrompe a função caso tecla inválida for pressioada
   if (!audio) return;
 
-  // rewind audio to the start, otherwise, if the key is pressed twice rapidly, the soundclip will only play through once
+  // retorna audio para o começo sempre que a tecla for pressionada
   audio.currentTime = 0;
 
   audio.play();
@@ -13,7 +13,7 @@ function playSound(event) {
 }
 
 function removeTransition(event) {
-  // skip it if it's not a transform
+  // considera apenas a transição transform, ignorando as outras
   if (event.propertyName !== 'transform') return;
 
   this.classList.remove('playing');
@@ -21,9 +21,9 @@ function removeTransition(event) {
 
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-// keys.forEach() instead of just forEach(), which means it's a property of an array
-// arrow functions is ES6 syntax
-// transitioned: a css transition has completed
+// keys.forEach() pois se trata de um array
+// arrow functions = sintaxe ES6
+// transitionend = quando uma transição do CSS termina
 
 window.addEventListener('keydown', playSound);
-// window, not document. document stands for DOM and window is the global object in a browser. the root object of the DOM
+// window ao invés de document. document representa DOM e window é o objeto global do navegador, root do DOM
