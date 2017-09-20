@@ -1,0 +1,26 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: mJekyll
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien neque, accumsan a placerat ac, scelerisque sit amet velit."
+baseurl: "/jekyll-study"
+twitter_username: RoneyStones
+github_username:  roneystones
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build settings
+permalink: /:title/
+include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
